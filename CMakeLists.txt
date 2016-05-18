@@ -1,6 +1,6 @@
 # /CMakeLists.txt
 #
-# Main entry point for CMakeLinter tests.
+# Main entry point for CMakeModuleCommon tests.
 #
 # See /LICENCE.md for Copyright information
 
