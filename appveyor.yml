@@ -18,9 +18,9 @@ install:
  - ps: wget public-travis-scripts.polysquare.org/bootstrap.py -OutFile bootstrap
  - ps: python bootstrap -d "C:/container" -s setup/conan/setup.py -e powershell -p test-env.ps1 --no-mdl --cmake-version latest
  - ps: . ./test-env
- - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install cmake-linter-cmake/master@smspillaz/cmake-linter-cmake
- - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install style-linter-cmake/master@smspillaz/style-linter-cmake
- - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install cmake-unit/master@smspillaz/cmake-unit
+ - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install --build=missing -u cmake-linter-cmake/master@smspillaz/cmake-linter-cmake
+ - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install --build=missing -u style-linter-cmake/master@smspillaz/style-linter-cmake
+ - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install --build=missing -u cmake-unit/master@smspillaz/cmake-unit
 build: false
 
 test_script:
