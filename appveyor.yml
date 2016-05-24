@@ -20,7 +20,7 @@ install:
  - ps: . ./test-env
  - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install cmake-linter-cmake/master@smspillaz/cmake-linter-cmake
  - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install style-linter-cmake/master@smspillaz/style-linter-cmake
-
+ - ps: C:/container/_languages/python/3.4.3/Scripts/conan.exe install cmake-unit/master@smspillaz/cmake-unit
 build: false
 
 test_script:
