@@ -2,17 +2,13 @@ from conans import ConanFile
 from conans.tools import download, unzip
 import os
 
-VERSION = "0.0.6"
+VERSION = "0.0.7"
 
 
 class CMakeModuleCommonConan(ConanFile):
     name = "cmake-module-common"
     version = os.environ.get("CONAN_VERSION_OVERRIDE", VERSION)
     generators = "cmake"
-    requires = ("cmake-forward-arguments/master@smspillaz/cmake-forward-arguments",
-                "cmake-unit/master@smspillaz/cmake-unit",
-                "cmake-linter-cmake/master@smspillaz/cmake-linter-cmake",
-                "style-linter-cmake/master@smspillaz/style-linter-cmake")
     url = "http://github.com/polysquare/cmake-module-common"
     license = "MIT"
 
