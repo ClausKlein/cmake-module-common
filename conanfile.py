@@ -14,6 +14,10 @@ class CMakeModuleCommonConan(ConanFile):
     requires = ("cmake-unit/master@smspillaz/cmake-unit",
                 "cmake-linter-cmake/master@smspillaz/cmake-linter-cmake",
                 "style-linter-cmake/master@smspillaz/style-linter-cmake")
+    options = {
+        "dev": [True, False]
+    }
+    default_options = "dev=False"
 
     def source(self):
         zip_name = "cmake-module-common.zip"
