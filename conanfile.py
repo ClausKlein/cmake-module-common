@@ -11,6 +11,9 @@ class CMakeModuleCommonConan(ConanFile):
     generators = "cmake"
     url = "http://github.com/polysquare/cmake-module-common"
     license = "MIT"
+    requires = ("cmake-unit/master@smspillaz/cmake-unit",
+                "cmake-linter-cmake/master@smspillaz/cmake-linter-cmake",
+                "style-linter-cmake/master@smspillaz/style-linter-cmake")
 
     def source(self):
         zip_name = "cmake-module-common.zip"
