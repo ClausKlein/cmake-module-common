@@ -24,9 +24,6 @@ install:
 - eval $(curl -LSs --retry 100 --connect-timeout 3 public-travis-scripts.polysquare.org/bootstrap.py
   | python /dev/stdin -d container -s setup/conan/setup.py -e bash -p /dev/stdout
   --cmake-version ${CMAKE_VERSION})
-- container/_languages/python/3.4.4/bin/conan install --build=missing -u cmake-linter-cmake/master@smspillaz/cmake-linter-cmake
-- container/_languages/python/3.4.4/bin/conan install --build=missing -u style-linter-cmake/master@smspillaz/style-linter-cmake
-- container/_languages/python/3.4.4/bin/conan install --build=missing -u cmake-unit/master@smspillaz/cmake-unit
 script:
 - polysquare_run check/conan/check.py ${COVERAGE} --cmake-namespace cmake_module --generator
   "${CMAKE_GENERATOR}"
