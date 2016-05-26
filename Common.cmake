@@ -24,6 +24,13 @@ function (cmake_module_add_common_targets)
     cmake_unit_init (NAMESPACE ${CMAKE_MODULE_NAMESPACE}
                      COVERAGE_FILES ${CMAKE_MODULE_CMAKE_FILES})
 
+    if (NOT "${_CMAKE_UNIT_PHASE}" # NOLINT:access/private_var
+        STREQUAL "PRECONFIGURE")
+
+        return ()
+
+    endif ()
+
     cmake_lint_sources (cmakelint
                         CMAKELINT_BLACKLIST "whitespace/extra"
                                             "package/consistency"
