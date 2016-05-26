@@ -2,6 +2,7 @@ AppVeyor
 Build
 CMake
 CMakeLinter
+CMakeModuleCommon
 cmake
 cmakelint
 commandline
